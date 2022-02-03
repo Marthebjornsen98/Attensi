@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import getProductCategoryData from "./components/data/productcategories.json";
+import ProductCategory from "./components/productCategory";
+import Products from "./components/products";
 
-function App() {
+// Styles
+import { GlobalStyle } from "./components/styled-components/GlobalStyle";
+import {
+  ProductContainer,
+  CardContainer,
+} from "./components/styled-components/productContainer/ProductContainer";
+
+const App = () => {
+  const [getProductData, setProductData] = useState(getProductCategoryData);
+  console.log(getProductCategoryData);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {getProductData.map((product) => (
+        <ProductContainer>
+          <ProductCategory key={product.id} title={product.title} />
+          <CardContainer>
+            {product.products.map(({ id, title, image, type }) => (
+              <Products key={id} title={title} image={image} type={type} />
+            ))}
+          </CardContainer>
+        </ProductContainer>
+      ))}
+      <GlobalStyle />;
     </div>
   );
-}
+};
 
 export default App;
