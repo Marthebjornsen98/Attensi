@@ -3,24 +3,35 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 
 :root {
-    primary-color: #070707;
-    secondary-color: #FFFFFF;
+    //Colors
+    --primary-color: #070707;
+    --secondary-color: #FFFFFF;
+    --tag-color: rgba(57, 188, 203, 0.2);
+    --link-color: #39BCCB;
 
-    border-radius: 30px;
+    //Font Weights
+    --semi-bold: 600;
+    --bold: 700;
+
+    //Border radius
+    --border-radius: 10px;
+    --img-border-radius: 10px 10px 0px 0px;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Poppins', Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    color: #070707;
+    color: (--primary-color);
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     h2 {
@@ -28,7 +39,13 @@ body {
     }
 
     h3 {
-        margin-top: 0px;
+        font-size: 2rem;
+        margin: 0px;
+    }
+
+    h4 {
+        font-size: 1rem;
+        margin: 0px;
     }
 
     p {

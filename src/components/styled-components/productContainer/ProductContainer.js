@@ -8,8 +8,8 @@ export const ProductContainer = styled.div`
 `;
 
 export const ProductCategory = styled.div`
-  display: flex;
   width: 100%;
+  display: flex;
 `;
 
 export const CardContainer = styled.div`
@@ -17,19 +17,31 @@ export const CardContainer = styled.div`
   margin: 20px 0px 80px 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 25px;
+  justify-content: flex-start;
+  gap: 25px 20px;
+  &:hover .card {
+    cursor: pointer;
+  }
 `;
 
 export const Card = styled.div`
   width: 32%;
-  height: auto;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 30px 30px 10px 10px;
-  background-color: white;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+`;
+
+export const Image = styled.div`
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  border-radius: var(--img-border-radius);
 `;
 
 export const CardTextContent = styled.div`
@@ -37,8 +49,25 @@ export const CardTextContent = styled.div`
 `;
 
 export const CardTag = styled.div`
-  background-color: rgba(57, 188, 203, 0.2);
-  padding: 5px 20px;
-  border-radius: 5px;
   width: fit-content;
+  margin: 10px 0px 30px 0px;
+  opacity: 0.6;
+  border-radius: var(--border-radius);
+`;
+
+export const SupportedPlatforms = styled.div`
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+`;
+
+export const ReadMoreBtn = styled.div`
+  width: fit-content;
+  font-weight: var(--semi-bold);
+  border-bottom: solid 3px var(--link-color);
+
+  &:hover {
+    font-weight: var(--bold);
+  }
 `;
