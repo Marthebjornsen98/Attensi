@@ -22,7 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Poppins', Arial, sans-serif;
     list-style: none;
-    text-decoration: none;
 }
 
 body {
@@ -31,7 +30,7 @@ body {
     color: (--primary-color);
 
     h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     h2 {
@@ -39,7 +38,7 @@ body {
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 0px;
     }
 

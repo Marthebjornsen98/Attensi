@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // Styles
 import {
@@ -6,8 +6,9 @@ import {
   Image,
   CardTextContent,
   CardTag,
-  ReadMoreBtn,
+  ShowMoreBtn,
   SupportedPlatforms,
+  SupportedPlatformsText,
 } from "../styled-components/productContainer/ProductContainer";
 
 const Products = ({
@@ -26,7 +27,7 @@ const Products = ({
       <CardTextContent>
         <h3>{title}</h3>
         <CardTag>{type}</CardTag>
-        <ReadMoreBtn onClick={() => setShow(false)}>Read more</ReadMoreBtn>
+        <ShowMoreBtn onClick={() => setShow(false)}>Show more</ShowMoreBtn>
       </CardTextContent>
     </Card>
   ) : (
@@ -39,9 +40,13 @@ const Products = ({
         <p>{description}</p>
         <SupportedPlatforms>
           <h4>Supported Platforms</h4>
-          <p>{supported_platforms}</p>
+          <SupportedPlatformsText>
+            {supported_platforms.map((platform, index) => (
+              <p key={index}>{platform}</p>
+            ))}
+          </SupportedPlatformsText>
         </SupportedPlatforms>
-        <ReadMoreBtn onClick={() => setShow(true)}>Read less</ReadMoreBtn>
+        <ShowMoreBtn onClick={() => setShow(true)}>Show less</ShowMoreBtn>
       </CardTextContent>
     </Card>
   );
