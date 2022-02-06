@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Leaderboard
-import DisplayLeaderboardData from "../leaderboard/DisplayLeaderboardData";
+import DisplayLeaderboardData from "../leaderboard/index";
 import LeaderboardData from "../data/leaderboards.json";
 
 // Styles
@@ -32,6 +32,7 @@ const Products = ({
       <CardTextContent>
         <h3>{title}</h3>
         <CardTag>{type}</CardTag>
+        <DisplayLeaderboardData getLeaderboardData={getLeaderboardData} />
         <ShowMoreBtn onClick={() => setShow(false)}>Show more</ShowMoreBtn>
       </CardTextContent>
     </Card>
@@ -43,7 +44,6 @@ const Products = ({
         <CardTag>{type}</CardTag>
         <h4>Description</h4>
         <p>{description}</p>
-        <DisplayLeaderboardData getLeaderboardData={getLeaderboardData} />
         <SupportedPlatforms>
           <h4>Supported Platforms</h4>
           <SupportedPlatformsText>

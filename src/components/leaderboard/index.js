@@ -16,8 +16,9 @@ const DisplayLeaderboardData = ({ getLeaderboardData }) => {
         }) => (
           <LeaderboardContainer key={leaderboardProduct_id}>
             <h4>Leaderboard</h4>
-            {leaderboardEntries.map(
-              ({ user_id, username, image, rank, score }) => (
+            {leaderboardEntries
+              .slice(0, 5)
+              .map(({ user_id, username, image, rank, score }) => (
                 <LeaderboardResults key={user_id}>
                   <RankAndImage>
                     <Rank>{rank}</Rank>
@@ -26,8 +27,7 @@ const DisplayLeaderboardData = ({ getLeaderboardData }) => {
                   <p>{username}</p>
                   <p>{score}</p>
                 </LeaderboardResults>
-              )
-            )}
+              ))}
           </LeaderboardContainer>
         )
       )}

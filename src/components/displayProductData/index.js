@@ -33,7 +33,7 @@ const DisplayProductData = ({ getProductData }) => {
                     type={productType}
                     description={productDescription}
                     supported_platforms={productSupportedPlatforms}
-                  ></Products>
+                  />
                 )
               )}
             </CardContainer>

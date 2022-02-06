@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     //Colors
     --primary-color: #070707;
     --secondary-color: #FFFFFF;
-    --tag-color: rgba(57, 188, 203, 0.2);
+    --light-color: rgba(57, 188, 203, 0.2);
     --link-color: #39BCCB;
 
     //Font Weights
@@ -30,7 +30,8 @@ body {
     color: (--primary-color);
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+        margin-bottom: 0px;
     }
 
     h2 {

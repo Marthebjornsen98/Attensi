@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductContainer = styled.div`
   width: 75%;
-  margin: auto;
+  margin: 50px auto 0px auto;
 `;
 
 export const ProductCategory = styled.div`
@@ -31,7 +31,7 @@ export const Card = styled.div`
 
 export const Image = styled.div`
   width: 100%;
-  height: 400px;
+  height: 370px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;

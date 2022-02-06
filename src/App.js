@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import logo from "../src/images/attensi.png";
+
+// Styles
+import { Header, Nav } from "./components/styled-components/header/Header";
 
 // Products
-import DisplayProductData from "./components/getProductData/DisplayProductData";
+import DisplayProductData from "./components/displayProductData";
 import GetProductCategoryData from "./components/data/productcategories.json";
 
 //Styles
@@ -12,7 +16,11 @@ const App = () => {
 
   return (
     <div className="app">
-      <header></header>
+      <Header>
+        <Nav>
+          <img src={logo} />
+        </Nav>
+      </Header>
       <main>
         <DisplayProductData getProductData={getProductData} />
         <GlobalStyle />
