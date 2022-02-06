@@ -50,8 +50,7 @@ export const CardTag = styled.p`
 `;
 
 export const SupportedPlatforms = styled.div`
-  height: auto;
-  margin-top: 40px;
+  margin: 40px 0px;
 `;
 
 export const SupportedPlatformsText = styled.div`

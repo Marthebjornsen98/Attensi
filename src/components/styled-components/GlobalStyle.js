@@ -49,6 +49,7 @@ body {
 
     p {
         font-size: 1rem;
+        margin-bottom: 0px;
     }
 }
 
