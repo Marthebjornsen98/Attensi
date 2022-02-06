@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+// Leaderboard
+import DisplayLeaderboardData from "../leaderboard/DisplayLeaderboardData";
+import LeaderboardData from "../data/leaderboards.json";
+
 // Styles
 import {
   Card,
@@ -20,6 +24,7 @@ const Products = ({
   supported_platforms,
 }) => {
   const [show, setShow] = useState(true);
+  const [getLeaderboardData, setLeaderboardData] = useState(LeaderboardData);
 
   return show ? (
     <Card key={id} className="card">
@@ -38,6 +43,7 @@ const Products = ({
         <CardTag>{type}</CardTag>
         <h4>Description</h4>
         <p>{description}</p>
+        <DisplayLeaderboardData getLeaderboardData={getLeaderboardData} />
         <SupportedPlatforms>
           <h4>Supported Platforms</h4>
           <SupportedPlatformsText>

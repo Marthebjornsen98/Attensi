@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import getProductCategoryData from "./components/data/productcategories.json";
+
+// Products
 import DisplayProductData from "./components/getProductData/DisplayProductData";
-import Leaderboard from "./components/leaderboard/Leaderboard";
+import GetProductCategoryData from "./components/data/productcategories.json";
 
 //Styles
 import { GlobalStyle } from "./components/styled-components/GlobalStyle";
 
 const App = () => {
-  const [getProductData, setProductData] = useState(getProductCategoryData);
+  const [getProductData, setProductData] = useState(GetProductCategoryData);
 
   return (
     <div className="app">
       <header></header>
       <main>
         <DisplayProductData getProductData={getProductData} />
-        <Leaderboard />
         <GlobalStyle />
       </main>
       <footer></footer>
