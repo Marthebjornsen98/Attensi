@@ -5,7 +5,7 @@ import {
   ProductContainer,
   CardContainer,
   ProductCategory,
-} from "../styled-components/productContainer/ProductContainer";
+} from "../styled-components/displayProduct/DisplayProduct";
 
 const DisplayProductData = ({ getProductData }) => {
   return (
@@ -28,6 +28,7 @@ const DisplayProductData = ({ getProductData }) => {
                 }) => (
                   <Products
                     key={productId}
+                    id={productId}
                     title={productTitle}
                     image={productImg}
                     type={productType}
