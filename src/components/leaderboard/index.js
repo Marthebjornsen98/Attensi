@@ -3,7 +3,7 @@ import {
   LeaderboardContainer,
   LeaderboardResults,
   Image,
-} from "../styled-components/leaderboard/leaderboard";
+} from "./leaderboard.styles";
 
 const DisplayLeaderboardData = ({ getLeaderboardData }) => {
   return (

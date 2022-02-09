@@ -5,7 +5,7 @@ import DisplayLeaderboardData from "../leaderboard/index";
 import LeaderboardData from "../data/leaderboards.json";
 
 // Styles
-import { Card, Image } from "../styled-components/product/Product";
+import { Card, Image } from "./Product.styles";
 
 const Products = ({
   id,
